@@ -4,23 +4,27 @@ try:
  import pyperclip
 except:
     print("Module not found! Installing...")
-    os.system("python.exe -m pip install pyperclip")
+    os.system("python -m pip install pyperclip")
+    import pyperclip
 import time
 try:
   import threading
 except:
     print("Module not found! Installing...")
-    os.system("python.exe -m pip install threading")
+    os.system("python -m pip install threading")
+    import threading
 try:
   import openai
 except:
     print("Module not found! Installing...")
-    os.system("python.exe -m pip install openai")
+    os.system("python -m pip install openai")
+    import openai
 try:
   import customtkinter
 except:
     print("Module not found! Installing...")
-    os.system("python.exe -m pip install customtkinter")
+    os.system("python -m pip install customtkinter")
+    import customtkinter
 model = "gpt-3.5-turbo-0613"
 
 class App():
@@ -162,7 +166,7 @@ class App():
          dialog = customtkinter.CTkInputDialog(title="API", text="type your api key.")
          key = dialog.get_input()
          if key == None:
-             api()
+              api()
          else:
              self.api = key
         api()
